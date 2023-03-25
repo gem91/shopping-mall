@@ -23,7 +23,7 @@ const HeaderNav = (props) => {
             {  user &&  <li><Link to='/carts'>Carts</Link></li>}
             {
               user && user.isAdmin && 
-              <li><Link to='/products/new'><AiOutlineAppstoreAdd />Add New</Link></li>
+              <li><Link to='/products/new'><AiOutlineAppstoreAdd />Add</Link></li>
             }
           </ul>
         </nav>

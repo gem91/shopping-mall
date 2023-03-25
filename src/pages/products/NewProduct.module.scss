@@ -1,0 +1,47 @@
+section{
+  padding: 100px 0;
+  .container{
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  h2{
+    text-align: center;
+    font-size: 2rem;
+  }
+  .success{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    width: 30%;
+    min-height: 300px;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    border: 1px solid #FF9800;
+    border-radius: 15px;
+    background-color: #fffffff2;
+  }
+  img{
+    display: block;
+    margin: 50px auto 0;
+    width: 400px;
+  }
+  form{
+    margin-top: 100px;
+    padding: 0 10%;
+    input{
+      margin-top: 10px;
+      padding: 10px 10px;
+      width: 100%;
+      border: 1px solid #eee;
+    }
+    button{
+      margin-top: 10px;
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+}

@@ -9,7 +9,6 @@ export function AuthContextProvider({children}) {
   useEffect(() => {
     // callback 함수받는 onUserStateChange
     onUserStateChange((user) => {
-      console.log(user);
       setUser(user)
     })
   }, [])

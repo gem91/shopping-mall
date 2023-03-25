@@ -3,7 +3,6 @@ import { useAuthContext } from 'components/context/AuthContext';
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRouter = ({children, requireAdmin}) => {
-  console.log(children);
   const { user } = useAuthContext(); 
 
   if( !user || (requireAdmin && !user.isAdmin) ){ // admin을 요구하고(requireAdmin) isAdmin이 아니면
