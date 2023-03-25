@@ -1,14 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({product: {id, title, category, description, image, options, price }}) => {
+import styles from './Product.module.scss'
+
+const ProductCard = ({product, product: {id, title, category, description, image, options, price }}) => {
+  const navigate = useNavigate();
   return (
-    <li>
-      <img src={image} alt={title} />
+    <li
+      className={styles.list} 
+      onClick={() => navigate(`/products/${id}`, { state: {product} })}
+    >
+      <span className={styles.thumb}><img src={image} alt={title} /></span>
       <div>
         <h3>{title}</h3>
-        <p>{price}원</p>
+        <p className={styles.price}>{price}원</p>
       </div>
-      <p>{category}</p>
+      <p className={styles.category}>{category}</p>
     </li>
   )
 };

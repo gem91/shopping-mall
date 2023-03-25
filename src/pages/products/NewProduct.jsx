@@ -40,7 +40,7 @@ const NewProdut = (props) => {
     setPrd((prd)=> ({...prd, [name]: value}))
   }
   return (
-    <section>
+    <section className={styles.newPrd}>
       <div className={styles.container}>
         <h2>❤️NEW 신상 등록❤️</h2>
         { success && <p className={styles.success}>{success}</p> }
