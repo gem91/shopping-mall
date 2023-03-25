@@ -11,6 +11,7 @@ header{
     flex-wrap: nowrap;
     .logo{
       display: block;
+      width: clamp(150px, 16%, 170px);
       h1{
         display: flex;
         align-items: center;
@@ -22,34 +23,39 @@ header{
         }
       }
     }
-    nav{
-      ul{
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        list-style-type: none;
-        li{
-          a{
-            display: flex;
-            align-items: center;
-            padding: 5px 10px;
-            color: #999;
-            text-decoration: none;
-            transition: .5s ease-in-out;
-            &:hover{
-              text-decoration: underline;
-              color: #555;
-            }
-            svg{
-              color: #ef9b3e;
+    .gnb{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      nav{
+        ul{
+          display: flex;
+          justify-content: flex-end;
+          gap: 20px;
+          list-style-type: none;
+          li{
+            a{
+              display: flex;
+              align-items: center;
+              padding: 5px 10px;
+              color: #999;
+              text-decoration: none;
+              transition: .5s ease-in-out;
+              &:hover{
+                text-decoration: underline;
+                color: #555;
+              }
+              svg{
+                color: #ef9b3e;
+              }
             }
           }
         }
       }
-    }
-    .utils{
-      display: flex;
-      gap: 15px;
+      .utils{
+        display: flex;
+        gap: 15px;
+      }
     }
   }
 }

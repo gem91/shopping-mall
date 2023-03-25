@@ -13,6 +13,7 @@ import AllProducts from 'pages/products/AllProducts';
 import ProdeuctDetail from 'pages/products/ProdeuctDetail';
 import NewProdut from 'pages/products/NewProduct';
 import MyCart from 'pages/carts/MyCart';
+import ProtectedRouter from 'pages/ProtectedRouter';
 
 const router = createBrowserRouter([
   {
@@ -22,9 +23,17 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: '/', element: <Home /> },
       { path: '/products', element: <AllProducts /> },
-      { path: '/products/new', element: <NewProdut /> },
+      { path: '/products/new', element: (
+        <ProtectedRouter requireAdmin={true} >
+          <NewProdut />
+        </ProtectedRouter>
+      ) },
       { path: '/products/:id', element: <ProdeuctDetail /> },
-      { path: '/carts', element: <MyCart /> },
+      { path: '/carts', element: (
+        <ProtectedRouter>
+          <MyCart />
+        </ProtectedRouter>
+      ) },
     ]
   }
 ])
