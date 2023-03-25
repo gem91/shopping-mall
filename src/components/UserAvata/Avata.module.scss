@@ -1,0 +1,30 @@
+.avata{
+  display: flex;
+  align-items: center;
+  .thumb{
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .name{
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .avata{
+    .thumb{
+      margin-right: 0;}
+    .name{
+      display: none;
+    }
+  }
+}
