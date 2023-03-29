@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         </ProtectedRouter>
       ) },
     ]
-  }
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
