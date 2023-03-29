@@ -5,6 +5,7 @@ import Banner from 'components/Banner';
 const Home = (props) => {
   return (
   <>
+    <p></p>
     <Banner />
     <Products /> 
   </>
