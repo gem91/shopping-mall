@@ -19,7 +19,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <NotFound />,
     children: [
       { index: true, path: '/', element: <Home /> },
       { path: '/products', element: <AllProducts /> },
@@ -34,7 +33,8 @@ const router = createBrowserRouter([
           <MyCart />
         </ProtectedRouter>
       ) },
-    ]
+    ],
+    errorElement: <NotFound />,
   },
 ])
 
