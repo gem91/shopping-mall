@@ -13,6 +13,7 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
+// 재로그인할때 자동로그인 막기
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
   prompt: 'select_account',
@@ -26,6 +27,7 @@ export async function login() {
     const user = result.user;
     return user;
   }).catch((error) => {
+    console.log('lgoin test');
     return error.message;
   });
 }
@@ -35,6 +37,7 @@ export async function logout() {
   .then(() => {
     return null;
   }).catch((error) => {
+    console.log('logout test');
     return error.message;
   });
 }
