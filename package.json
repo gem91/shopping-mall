@@ -2,7 +2,7 @@
   "name": "shopping-mall",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gem91.github.io/shopping-mall",
+  "homepage": "http://gem91.github.io/shopping-mall/",
   "dependencies": {
     "@tanstack/react-query": "^4.28.0",
     "@testing-library/jest-dom": "^5.14.1",
