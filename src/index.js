@@ -14,13 +14,19 @@ import ProdeuctDetail from 'pages/products/ProdeuctDetail';
 import NewProdut from 'pages/products/NewProduct';
 import MyCart from 'pages/carts/MyCart';
 import ProtectedRouter from 'pages/ProtectedRouter';
+import ErrorComponent from './Components/ErrorComponent';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      { index: true, path: '/', element: <Home /> },
+      { 
+        index: true, 
+        path: '/', 
+        element: <Home />,
+        errorElement: <ErrorComponent />,
+    },
       { path: '/products', element: <AllProducts /> },
       { path: '/products/new', element: (
         <ProtectedRouter requireAdmin={true} >
